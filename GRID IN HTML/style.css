@@ -1,0 +1,252 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,900&family=Poppins:wght@300;400;500;600&family=Roboto:wght@400;700&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+  p {
+    font-family: "Poppins", sans-serif;
+    color: rgb(85, 85, 85);
+
+  }
+  
+  /* TRANSITION */
+  
+  a,
+  .btn {
+    transition: all 300ms ease;
+  }
+  
+  /* DESKTOP NAV */
+  
+  nav,
+  .nav-links {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+
+  }
+  nav {
+    justify-content: space-around;
+    align-items:center;
+    height: 16vh;
+  }
+  
+  .nav-links {
+    padding-right: 90px;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+  }
+  
+  a {
+    color: black;
+    text-decoration: none;
+    text-decoration-color: white;
+  }
+  
+  a:hover {
+    color: grey;
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    text-decoration-color: rgb(181, 181, 181);
+  }
+  
+  .logo {
+    padding: 80px;
+    width: 100%;
+    font-size: 2rem;
+    color: black;
+   
+    
+  }
+  
+  .logo:hover {
+    cursor: default;
+  }
+  
+body{
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+}
+.container
+{
+    background-color:white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+}
+.left-text
+{
+    
+    flex-basis:30%;
+  
+}
+
+.heading
+{
+  background-position: -500px 0;
+  animation: backcolor 3s linear infinite;
+  animation:animate 3s ease-in-out infinite;
+    font-size: 3rem;
+    text-align: center;
+}
+.subheading
+{
+    margin-top: 10px;
+    text-align: center;
+}
+.gallery
+{
+ flex-basis: 50%;
+ display: grid;
+ gap: 8px;
+ grid-template-columns: repeat(3,1fr);
+ grid-auto-rows: 120px;
+
+}
+.box
+{
+    background-size: cover;
+    background-position: top;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+    
+}
+.box:hover{
+    background-color: #999;
+    background-position: center;
+    box-shadow: 0 0 4px #fff;
+}
+
+
+.row-2
+{
+    grid-row: span 2;
+}
+.col-2
+{
+    grid-column: span 2;
+}
+
+@media screen and (max-width:1024px){
+  .container
+  {
+    flex-direction: column;
+    padding-block: 20px;
+  }
+  .gallery
+  {
+    width: 100%;
+    padding-inline: 12px;
+    grid-auto-flow: 220px;
+  }
+  .box{
+    grid-row: span 1;
+    grid-column: span 3;
+  }
+  
+}
+.container1
+{
+  background-color: black;
+}
+.container1 span{
+  color: hsl(0, 0%, 0%);
+  background-repeat: no-repeat;
+  background-position: -500px 0;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  animation: animate 2s ease-in-out infinite;
+  animation-delay: calc(0.1s*var(--i));
+  font-size: 70px;
+  letter-spacing: 2px;
+}
+@keyframes animate
+{
+  0%,40%,100%
+  {
+   transform: translateY(0px);
+  }
+  60%
+  {
+   transform: translateY(-20px);
+  }
+
+}
+footer {
+  height: 16vh;
+  margin: 0 1rem;
+}
+
+footer p {
+ 
+  text-align: center;
+}
+
+.container1 h1
+{
+  position: relative;
+  -webkit-box-reflect: below -12px  linear-gradient( transparent,rgba(0,0,0,0.2)) ;
+  color: hsl(0, 0%, 0%);
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  background-image: linear-gradient(#fff,#fff);
+  background-repeat: no-repeat;
+  --webkit-background-clip: text;
+  background-position: -500px 0;
+  animation: backcolor 3s linear infinite;
+  animation:animate 3s ease-in-out infinite;
+}
+
+@keyframes backcolor {
+  100%{
+    background-position: 0 0;
+  }
+}
+@keyframes animate
+{
+  0%
+  {
+   transform: translateY(0px);
+  }
+  20%
+  {
+   transform: translateY(-20px);
+  }
+  40%,100%
+  {
+   transform: translateY(0px);
+  }
+
+}
+.heading1
+{
+  background-position: -500px 0;
+  animation: backcolor 3s linear infinite;
+  animation:animate 3s ease-in-out infinite;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+
+
